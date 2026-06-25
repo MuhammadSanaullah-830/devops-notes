@@ -1,91 +1,61 @@
-# Recommended File Name
+---
 
-`templates/documentation-prompt.md`
+# 🚀 Enhanced GitHub Notes Intelligence Layer (Optional Upgrade)
+
+If possible, also perform the following enhancements:
+
+## 1. Auto File Naming Convention
+
+Generate file names using this format:
+
+- lowercase only
+- hyphen-separated
+- include domain prefix
+
+Examples:
+
+- mysql-user-management.md
+- aws-iam-basics.md
+- kubernetes-rbac-guide.md
+- terraform-state-management.md
 
 ---
 
-# GitHub Documentation Generation Prompt
+## 2. Auto Folder Classification
 
-Act as a Senior DevOps Engineer and Technical Documentation Writer.
+Automatically choose correct folder from:
 
-Create a professional GitHub-ready Markdown (`.md`) document for the following topic:
+- mysql/
+- aws/
+- kubernetes/
+- terraform/
+- linux/
+- docker/
+- cicd/
+- networking/
+- troubleshooting/
 
-`[TOPIC NAME]`
-
-## Requirements
-
-* Use proper Markdown formatting.
-* Add a clear title and introduction.
-* Organize content with headings and subheadings.
-* Include practical examples.
-* Include command examples in code blocks.
-* Explain each command briefly.
-* Add a Best Practices section.
-* Add a Troubleshooting section (if applicable).
-* Add a Common Mistakes section.
-* Add a Security Considerations section (if applicable).
-* Add a Quick Reference Cheat Sheet at the end.
-* Structure the document so it can be directly saved as a `.md` file inside a GitHub repository.
-* Use a concise but professional DevOps documentation style.
-* Do not include unnecessary explanations.
-* Make the document production-ready and useful for future reference.
-* Include a recommended file name at the top.
-
-## Output Requirements
-
-* Output only the Markdown document.
-* Do not add explanations outside the document.
-* Ensure the content is GitHub-ready and properly formatted.
+If topic is mixed, choose the PRIMARY domain.
 
 ---
 
-## Example Usage
+## 3. Visibility Recommendation (Important)
 
-### Example 1
+Always suggest:
 
-```text
-Act as a Senior DevOps Engineer and Technical Documentation Writer.
+- Public → generic DevOps knowledge, commands, concepts
+- Private → sensitive, internal, lab-specific, or security-related content
 
-Create a professional GitHub-ready Markdown (.md) document for the following topic:
+Add 1-line reason.
 
-MySQL User Management
-```
+---
 
-### Example 2
+## 4. Add Metadata Section (NEW)
 
-Use the same prompt and only replace the topic:
+At the top of Markdown content, include:
 
-```text
-AWS IAM User Management
-Terraform Basics
-Kubernetes RBAC
-Docker Commands Cheat Sheet
-Linux User Management
-Nginx Reverse Proxy Setup
-Git Branching Strategy
-Jenkins Pipeline Setup
-AWS EC2 Troubleshooting
-MySQL Backup and Restore
-```
-
-## Notes
-
-Create a repository folder named:
-
-```text
-templates/
-```
-
-Save this prompt as:
-
-```text
-templates/documentation-prompt.md
-```
-
-Whenever you need new documentation, replace only:
-
-```text
-[TOPIC NAME]
-```
-
-and generate the document.
+```md
+## Metadata
+- Category: <AWS / MySQL / Kubernetes etc.>
+- Difficulty: Beginner / Intermediate / Advanced
+- Tags: <comma separated tags>
